@@ -9,3 +9,4 @@ edition = "2018"
 [dependencies]
 tokio = { version = "0.3", features = ["full"] }
 async-trait = "0.1.42"
+parse-display = "0.4.0"

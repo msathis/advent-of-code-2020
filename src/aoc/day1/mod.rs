@@ -1,5 +1,4 @@
 use std::collections::HashSet;
-
 use crate::aoc::utils::Input;
 
 pub async fn part1() -> String {
