@@ -28,4 +28,16 @@ impl Input {
 
         buf.lines().map(|d| d.to_string()).collect()
     }
+
+    pub async fn read_as_string(&self) -> String {
+        let mut file = match File::open(&self.path).await {
+            Err(e) => panic!("File is wrong, {}", e),
+            Ok(f) => f,
+        };
+
+        let mut buf = String::new();
+        file.read_to_string(&mut buf).await;
+
+       buf
+    }
 }
